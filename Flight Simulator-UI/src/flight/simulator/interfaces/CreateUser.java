@@ -67,9 +67,17 @@ public class CreateUser extends javax.swing.JFrame {
 
         jCheckBox1.setText("Admin?");
 
-        jTextField5.setText("jTextField5");
-
         jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordField1MouseClicked(evt);
+            }
+        });
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Submit");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -175,6 +183,15 @@ public class CreateUser extends javax.swing.JFrame {
           }
       
            }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+
+    jPasswordField1.setText(" ");
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jPasswordField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1MouseClicked
 
     /**
      * @param args the command line arguments
