@@ -5,6 +5,8 @@
  */
 package flight.simulator.interfaces;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author blakejoynes
@@ -70,6 +72,11 @@ public class CreateUser extends javax.swing.JFrame {
         jPasswordField1.setText("jPasswordField1");
 
         jButton1.setText("Submit");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jButton2.setText("Clear");
 
@@ -157,6 +164,17 @@ public class CreateUser extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+         JOptionPane.showMessageDialog(null, "You have been resgistered!");
+          if(jCheckBox1.isSelected()){
+              new AdminView().setVisible(true);
+          }
+          else{
+           new UserLesson().setVisible(true);  
+          }
+      
+           }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
