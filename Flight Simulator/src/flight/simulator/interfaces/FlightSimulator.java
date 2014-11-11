@@ -9,7 +9,7 @@ package flight.simulator.interfaces;
  *
  * @author blakejoynes
  */
-public class FlightSimualator {
+public class FlightSimulator {
 
     /**
      * @param args the command line arguments

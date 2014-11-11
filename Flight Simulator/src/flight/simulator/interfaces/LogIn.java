@@ -43,6 +43,11 @@ public class LogIn extends javax.swing.JFrame {
         jPasswordField1.setText("jPasswordField1");
 
         jButton1.setText("Sign In");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jButton2.setText("Sign Up");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,6 +128,17 @@ public class LogIn extends javax.swing.JFrame {
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         new CreateUser().setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+         if(jCheckBox1.isSelected()){
+           this.dispose();
+           new AdminView().setVisible(true);
+          }
+          else{
+           this.dispose();
+           new UserView().setVisible(true);  
+          }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments

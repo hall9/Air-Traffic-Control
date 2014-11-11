@@ -174,12 +174,12 @@ public class CreateUser extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-         JOptionPane.showMessageDialog(null, "You have been resgistered!");
+         JOptionPane.showMessageDialog(null, "You have been registered!");
           if(jCheckBox1.isSelected()){
               new AdminView().setVisible(true);
           }
           else{
-           new UserLesson().setVisible(true);  
+           new UserView().setVisible(true);  
           }
       
            }//GEN-LAST:event_jButton1MouseClicked
