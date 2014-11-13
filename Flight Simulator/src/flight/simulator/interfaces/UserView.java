@@ -41,6 +41,11 @@ public class UserView extends javax.swing.JFrame {
         jButton2.setText("View Report");
 
         jButton3.setText("Start Simulator");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
         jButton4.setText("Log Out");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -92,6 +97,10 @@ public class UserView extends javax.swing.JFrame {
       JOptionPane.showMessageDialog(null, "You are now logging out!");
       this.dispose();
     }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments
