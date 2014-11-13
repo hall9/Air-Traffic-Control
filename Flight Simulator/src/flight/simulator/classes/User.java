@@ -3,25 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package flight.simulator;
+package flight.simulator.classes;
+
+import java.util.Date;
 
 /**
  *
  * @author blakejoynes
  */
-public class Goals {
- int goalNum;
- static String goalName;
- 
- 
- public static String getGoals(int goalNum){
-   
-     return goalName;
- }
+public abstract class User {
+    String uName;
+    String pass;
+    String email;
+    Date dateofBirth;
+    boolean admin = false;
     
- public static void setGoals(){
-     
- }
- 
-    
+   public abstract boolean logIn();
 }

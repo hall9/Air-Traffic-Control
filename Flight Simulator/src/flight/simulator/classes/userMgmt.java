@@ -3,21 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package flight.simulator;
+package flight.simulator.classes;
 
 /**
  *
  * @author blakejoynes
  */
-public abstract class Grade {
-    int lessonID;
+public class userMgmt {
     String uName;
-    char grade;
     
+    public static void addUser(String uName){
+        
+    }
     
-    public abstract char getGrade(int lessonID);
-    public abstract void getFeedback(String uName, int lessonID);
-    public abstract void simFeedback();
+    public static void removeUser(String uName){
+        
+    }
+    
+    public static void userUpdate(String uName){
+        
+    }
     
     
 }

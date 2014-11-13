@@ -3,20 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package flight.simulator;
-
-import java.util.Date;
+package flight.simulator.classes;
 
 /**
  *
  * @author blakejoynes
  */
-public abstract class User {
-    String uName;
-    String pass;
-    String email;
-    Date dateofBirth;
-    boolean admin = false;
+public abstract class Lesson {
+    int lessonID;
+    String lessonName;
     
-   public abstract boolean logIn();
+    public abstract String getLesson(int lessonID);
+    
+    public abstract void setLesson();
+    
 }

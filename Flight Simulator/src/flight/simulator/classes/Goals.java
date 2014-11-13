@@ -3,18 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package flight.simulator;
+package flight.simulator.classes;
 
 /**
  *
  * @author blakejoynes
  */
-public abstract class Lesson {
-    int lessonID;
-    String lessonName;
+public class Goals {
+ int goalNum;
+ static String goalName;
+ 
+ 
+ public static String getGoals(int goalNum){
+   
+     return goalName;
+ }
     
-    public abstract String getLesson(int lessonID);
-    
-    public abstract void setLesson();
+ public static void setGoals(){
+     
+ }
+ 
     
 }
