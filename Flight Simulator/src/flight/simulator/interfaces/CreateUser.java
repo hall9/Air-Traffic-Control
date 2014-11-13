@@ -5,6 +5,12 @@
  */
 package flight.simulator.interfaces;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,11 +19,17 @@ import javax.swing.JOptionPane;
  */
 public class CreateUser extends javax.swing.JFrame {
 
+Connection con;
+PreparedStatement pstmt;
+ResultSet rs = null;
+Statement stmt;
+   
     /**
      * Creates new form CreateUser
      */
     public CreateUser() {
         initComponents();
+       
     }
 
     /**
@@ -174,7 +186,8 @@ public class CreateUser extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-         JOptionPane.showMessageDialog(null, "You have been registered!");
+
+          addUser();
           if(jCheckBox1.isSelected()){
               new AdminView().setVisible(true);
           }
@@ -227,6 +240,34 @@ public class CreateUser extends javax.swing.JFrame {
             }
         });
     }
+    
+    public  void addUser(){
+        try{
+        String host = "jdbc:derby://localhost:1527/Flight Simulation";
+        String uName = "administrator";
+        String uPass = "password";      
+        con = DriverManager.getConnection( host, uName, uPass );
+        
+         String sql = "INSERT into USERS (FNAME,LNAME,BDATE,EMAIL,UNAME,PASS) Values (?,?,?,?,?,?)";
+         pstmt = con.prepareStatement(sql);
+          
+            pstmt.setString(1,jTextField1.getText());
+            pstmt.setString(2,jTextField2.getText());
+            pstmt.setString(3,jTextField3.getText());
+            pstmt.setString(4,jTextField4.getText());
+            pstmt.setString(5,jTextField5.getText());
+            pstmt.setString(6,jPasswordField1.getText());
+            pstmt.execute();
+      
+            JOptionPane.showMessageDialog(null, "You have been registered!");
+            
+        }catch(SQLException err){
+            System.out.println(err);
+        }
+    }
+
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
