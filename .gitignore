@@ -8,6 +8,50 @@
 *.war
 *.ear
 
+*/build/
+*/dist/
+
+# Java Derby #
+.idea*
+node_modules/
+temp/
+
+# NetBeans #
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+<<<<<<< HEAD
 hs_err_pid*
+/Flight Simulator/dist/
+=======
+hs_err_pid*
+<<<<<<< HEAD
 /Flight Simulator-UI/dist/
+=======
+>>>>>>> Development
+>>>>>>> Blake-Branch
