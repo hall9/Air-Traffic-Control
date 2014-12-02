@@ -29,33 +29,43 @@ public class AdminView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        viewEditUsers = new javax.swing.JButton();
+        viewEditLessons = new javax.swing.JButton();
+        viewEditGoals = new javax.swing.JButton();
+        logOUt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("View/Edit Users");
-
-        jButton2.setText("View/Edit Lessons");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("View/Edit Goals");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Log Out");
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        viewEditUsers.setText("User Options");
+        viewEditUsers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
+                viewEditUsersMouseClicked(evt);
+            }
+        });
+        viewEditUsers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewEditUsersActionPerformed(evt);
+            }
+        });
+
+        viewEditLessons.setText("Lesson Options");
+        viewEditLessons.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewEditLessonsActionPerformed(evt);
+            }
+        });
+
+        viewEditGoals.setText("Goal Options");
+        viewEditGoals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewEditGoalsActionPerformed(evt);
+            }
+        });
+
+        logOUt.setText("Log Out");
+        logOUt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logOUtMouseClicked(evt);
             }
         });
 
@@ -66,41 +76,53 @@ public class AdminView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                    .addComponent(viewEditLessons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(viewEditUsers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(viewEditGoals, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(logOUt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(viewEditUsers)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(viewEditLessons)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(viewEditGoals)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(logOUt)
                 .addGap(19, 19, 19))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void viewEditLessonsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewEditLessonsActionPerformed
+        
+    }//GEN-LAST:event_viewEditLessonsActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void viewEditGoalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewEditGoalsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_viewEditGoalsActionPerformed
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+    private void logOUtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logOUtMouseClicked
       JOptionPane.showMessageDialog(null, "You are now logging out!");
       this.dispose();
-    }//GEN-LAST:event_jButton4MouseClicked
+    }//GEN-LAST:event_logOUtMouseClicked
+
+    private void viewEditUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewEditUsersActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new viewEditUser().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_viewEditUsersActionPerformed
+
+    private void viewEditUsersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewEditUsersMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_viewEditUsersMouseClicked
 
     /**
      * @param args the command line arguments
@@ -138,9 +160,9 @@ public class AdminView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton logOUt;
+    private javax.swing.JButton viewEditGoals;
+    private javax.swing.JButton viewEditLessons;
+    private javax.swing.JButton viewEditUsers;
     // End of variables declaration//GEN-END:variables
 }
