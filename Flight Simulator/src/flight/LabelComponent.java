@@ -24,7 +24,7 @@
 
  */
 
-package atc;
+package flight;
 
 
 import java.awt.*;

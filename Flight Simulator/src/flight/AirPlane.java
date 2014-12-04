@@ -22,7 +22,7 @@
  *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-package atc;
+package flight;
     
 import java.util.*;
 
@@ -358,7 +358,7 @@ public class AirPlane {
         
     }
     
-    public void setHeading (int)
+    
 /*
  
     private String callsign;    // tail number

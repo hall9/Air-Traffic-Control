@@ -23,7 +23,7 @@
  *
  */
 
-package atc;
+package flight;
 
 import java.awt.*;
 import javax.swing.*;

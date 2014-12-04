@@ -358,7 +358,7 @@ public class AirPlane {
         
     }
     
-    public void setHeading (int)
+
 /*
  
     private String callsign;    // tail number
