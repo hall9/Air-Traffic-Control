@@ -100,15 +100,16 @@ public class Main {
         atcscreen.addplane(ap2);
         atcscreen.addplane(ap3);
         AirControls controller = new AirControls(ap1, ap2, ap3, null);
+        
         boolean controlLoop = true;
         for(int i =0; i <= 2; i++) {
-            controlLoop = controlLoop && planelisting[i].getCrash();
+            controlLoop = controlLoop && planelisting[i].getCrash(); //sets the controlLoop
         }
-        while(true)
+        while(true && controlLoop)
         {
             try
             {
-                Thread.sleep(4000);
+                Thread.sleep(3000);
             }
             catch(Exception e)
             {
@@ -116,6 +117,9 @@ public class Main {
             }  
             atcscreen.update(); // this will update the "radar" screen
             frame.repaint();
+            for(int i =0; i <= 2; i++) {
+            controlLoop = controlLoop && planelisting[i].getCrash(); //sets the controlLoop
+        }
         }
     }  
 }
