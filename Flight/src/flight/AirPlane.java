@@ -358,6 +358,10 @@ public class AirPlane {
         
     }
     
+    public void changeDirection(int turn) {
+        cu_heading += turn;
+    }
+    
 
 /*
  

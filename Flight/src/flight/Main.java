@@ -106,7 +106,8 @@ public class Main {
             catch(Exception e)
             {
                 System.out.println("insomnia!");
-            }  
+            } 
+            
             atcscreen.update(); // this will update the "radar" screen
             frame.repaint();
         }

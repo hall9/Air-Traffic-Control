@@ -86,7 +86,7 @@ public class AirPlane {
         trailarray[2] = new TrailComponent(posx,posy);
         trailarray[3] = new TrailComponent(posx,posy);
         
-        crash = false;
+        crash = true;
 
     }  
     
@@ -353,7 +353,7 @@ public class AirPlane {
     
     public boolean checkCrash(AirPlane incoming) {
         if(incoming.posx == this.posx && incoming.posy == this.posy) 
-            this.crash = true;
+            this.crash = false;
         return this.crash;
         
     }
