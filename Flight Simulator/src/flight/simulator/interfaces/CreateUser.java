@@ -59,14 +59,14 @@ boolean mngr = false;
         eMail = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        administrator = new javax.swing.JCheckBox();
         userName = new javax.swing.JTextField();
         passWord = new javax.swing.JPasswordField();
         submit = new javax.swing.JButton();
         clear = new javax.swing.JButton();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        manager = new javax.swing.JCheckBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("First Name");
 
@@ -86,7 +86,7 @@ boolean mngr = false;
 
         jLabel6.setText("Password");
 
-        jCheckBox1.setText("Admin?");
+        administrator.setText("Admin?");
 
         passWord.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -118,10 +118,10 @@ boolean mngr = false;
             }
         });
 
-        jCheckBox2.setText("Manager?");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        manager.setText("Manager?");
+        manager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                managerActionPerformed(evt);
             }
         });
 
@@ -150,7 +150,7 @@ boolean mngr = false;
                                 .addComponent(jLabel4))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(137, 137, 137)
-                                .addComponent(jCheckBox1)))
+                                .addComponent(administrator)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(eMail, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -164,7 +164,7 @@ boolean mngr = false;
                             .addComponent(userName, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(137, 137, 137)
-                        .addComponent(jCheckBox2)))
+                        .addComponent(manager)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
@@ -198,9 +198,9 @@ boolean mngr = false;
                     .addComponent(jLabel6)
                     .addComponent(passWord, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox1)
+                .addComponent(administrator)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jCheckBox2)
+                .addComponent(manager)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submit)
@@ -218,7 +218,7 @@ boolean mngr = false;
     private void submitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitMouseClicked
 
           addUser();
-          if(jCheckBox1.isSelected()){
+          if(administrator.isSelected()){
               new AdminView().setVisible(true);
           }
           else{
@@ -235,9 +235,9 @@ boolean mngr = false;
         // TODO add your handling code here:
     }//GEN-LAST:event_passWordMouseClicked
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void managerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_managerActionPerformed
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
         fname = firstName.getText();
@@ -256,6 +256,8 @@ boolean mngr = false;
         dateOfBirth.setText("");
         eMail.setText("");
         userName.setText("");
+        administrator.setSelected(false);
+        manager.setSelected(false);
     }//GEN-LAST:event_clearActionPerformed
 
     /**
@@ -333,12 +335,11 @@ boolean mngr = false;
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox administrator;
     private javax.swing.JButton clear;
     private javax.swing.JTextField dateOfBirth;
     private javax.swing.JTextField eMail;
     private javax.swing.JTextField firstName;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -346,6 +347,7 @@ boolean mngr = false;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField lastName;
+    private javax.swing.JCheckBox manager;
     private javax.swing.JPasswordField passWord;
     private javax.swing.JButton submit;
     private javax.swing.JTextField userName;
