@@ -351,6 +351,10 @@ public class AirPlane {
         return cl_speed;
     }
     
+    public boolean getCrash() {
+        return crash;
+    }
+    
     public boolean checkCrash(AirPlane incoming) {
         if(incoming.posx == this.posx && incoming.posy == this.posy) 
             this.crash = false;
