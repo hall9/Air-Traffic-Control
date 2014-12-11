@@ -116,6 +116,7 @@ public class Main {
                 System.out.println("insomnia!");
             }  
             atcscreen.update(); // this will update the "radar" screen
+            controller.updatePanel();
             frame.repaint();
             for(int i =0; i <= 2; i++) {
             controlLoop = controlLoop && planelisting[i].getCrash(); //sets the controlLoop
