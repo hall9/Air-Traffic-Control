@@ -75,9 +75,9 @@ public class Main {
             }
         });  
         //String call_sign, int climb_rate, int turn_rate, int heading, int alt, String direct, int speed, int pos_x, int pos_y , int accel_rate        
-        AirPlane ap1 = new AirPlane("HIGH", 50, 5, 45, 50000, "bogus1", 400, 200, 200, 10);
-        AirPlane ap2 = new AirPlane("LOW", 40, 5, 90, 10000, "bogus2", 200, 400, 100, 10);
-        AirPlane ap3 = new AirPlane("MED", 10, 12, 180, 10000, "bogus2", 200, 40, 100, 50);
+        AirPlane ap1 = new AirPlane("HIGH", 50, 20, 30, 50000, "bogus1", 400, 200, 200, 100);
+        AirPlane ap2 = new AirPlane("LOW", 40, 5, 270, 10000, "bogus2", 200, 400, 200, 130);
+        AirPlane ap3 = new AirPlane("MED", 10, 12, 90, 10000, "bogus2", 200, 40, 200, 90);
         AirPlane ap4 = new AirPlane("HIGH2", 4, 21, 45, 50000, "bogus1", 400, 200, 200, 10);
         AirPlane ap5 = new AirPlane("MED2", 23, 6, 90, 10000, "bogus2", 200, 400, 100, 10);
         AirPlane ap6 = new AirPlane("LOW2", 50, 50, 180, 10000, "bogus2", 200, 40, 100, 50);
@@ -105,7 +105,7 @@ public class Main {
         for(int i =0; i <= 2; i++) {
             controlLoop = controlLoop && planelisting[i].getCrash(); //sets the controlLoop
         }
-        while(true && controlLoop)
+        while(true && atcscreen.checkPlaneCrash())
         {
             try
             {
@@ -114,7 +114,8 @@ public class Main {
             catch(Exception e)
             {
                 System.out.println("insomnia!");
-            }  
+            } 
+            
             atcscreen.update(); // this will update the "radar" screen
             controller.updatePanel();
             frame.repaint();
