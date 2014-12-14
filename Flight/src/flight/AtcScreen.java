@@ -90,4 +90,18 @@ public class AtcScreen extends JPanel {
             updateLabelLocation(ap);
         }
     }
+    
+    public boolean checkPlaneCrash () {
+        if(planelist.isEmpty() || planelist.size() == 1) {
+            return false;
+         }else {
+            for(int i = 0; i < planelist.size()-1; i++) {
+                for(int j = i+1; j < planelist.size()-1; j++) {
+                if(planelist.get(i).checkCrash(planelist.get(j)))
+                    return true;
+                    }
+            }
+            return false;
+        }
+    }
 }

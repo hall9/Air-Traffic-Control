@@ -59,8 +59,10 @@ public class AirPlane {
     
     public TrailComponent[] trailarray = new TrailComponent[4];
     
+    private boolean crash;
+    
     /** Creates a new instance of AirPlane */
-    public AirPlane( String call_sign, int climb_rate, int turn_rate, int heading,
+    public AirPlane(String call_sign, int climb_rate, int turn_rate, int heading,
             int alt, String direct, int speed, int pos_x, int pos_y , int accel_rate) {
         cu_heading  = cl_heading    = heading;
         cu_alt      = cl_alt        = alt;
@@ -83,7 +85,8 @@ public class AirPlane {
         trailarray[1] = new TrailComponent(posx,posy);
         trailarray[2] = new TrailComponent(posx,posy);
         trailarray[3] = new TrailComponent(posx,posy);
-
+        
+        crash = false;
 
     }  
     
@@ -347,6 +350,19 @@ public class AirPlane {
     {
         return cl_speed;
     }
+    
+    public boolean checkCrash(AirPlane incoming) {
+        if(incoming.posx == this.posx && incoming.posy == this.posy) 
+            this.crash = true;
+        return this.crash;
+        
+    }
+    
+    public void changeDirection(int turn) {
+        cu_heading += turn;
+    }
+    
+
 /*
  
     private String callsign;    // tail number
