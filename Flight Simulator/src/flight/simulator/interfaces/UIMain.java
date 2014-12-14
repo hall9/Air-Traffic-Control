@@ -9,13 +9,14 @@ package flight.simulator.interfaces;
  *
  * @author blakejoynes
  */
-public class FlightSimulator {
+public class UIMain {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+          LogIn login = new LogIn();
+          login.setVisible(true);
     }
     
 }
