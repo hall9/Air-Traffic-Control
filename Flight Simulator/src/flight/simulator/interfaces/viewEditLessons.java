@@ -34,6 +34,11 @@ public class viewEditLessons extends javax.swing.JFrame {
 
         createLesson.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         createLesson.setText("Create Lesson");
+        createLesson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createLessonActionPerformed(evt);
+            }
+        });
 
         viewEditLesson.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         viewEditLesson.setText("View/Edit Lesson");
@@ -61,6 +66,14 @@ public class viewEditLessons extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void createLessonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createLessonActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new createLesson().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_createLessonActionPerformed
 
     /**
      * @param args the command line arguments
