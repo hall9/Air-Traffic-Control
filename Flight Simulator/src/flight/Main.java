@@ -75,14 +75,14 @@ public class Main {
             }
         });  
         //String call_sign, int climb_rate, int turn_rate, int heading, int alt, String direct, int speed, int pos_x, int pos_y , int accel_rate        
-        AirPlane ap1 = new AirPlane("HIGH", 50, 20, 45, 50000, "bogus1", 400, 200, 200, 100);
-        AirPlane ap2 = new AirPlane("LOW", 40, 5, 222, 10000, "bogus2", 200, 400, 200, 130);
+        AirPlane ap1 = new AirPlane("HIGH", 50, 90, 0, 50000, "bogus1", 400, 200, 100, 100);
+        AirPlane ap2 = new AirPlane("LOW", 40, 90, 180, 10000, "bogus2", 200, 400, 200, 100);
         AirPlane ap3 = new AirPlane("MED", 10, 12, 110, 10000, "bogus2", 200, 40, 200, 90);
         AirPlane ap4 = new AirPlane("HIGH2", 4, 21, 45, 50000, "bogus1", 400, 200, 200, 10);
         AirPlane ap5 = new AirPlane("MED2", 23, 6, 90, 10000, "bogus2", 200, 400, 100, 10);
         AirPlane ap6 = new AirPlane("LOW2", 50, 50, 180, 10000, "bogus2", 200, 40, 100, 50);
         
-        AirPlane[] planelisting = {ap1, ap2, ap3};
+        AirPlane[] planelisting = {ap1, ap2, ap3, ap4};
         ap1.SetClearAlt(1000);
         ap1.SetClearHeading(1);
         ap1.SetClearSpeed(75);     
@@ -99,7 +99,7 @@ public class Main {
         atcscreen.addplane(ap1);
         atcscreen.addplane(ap2);
         atcscreen.addplane(ap3);
-        AirControls controller = new AirControls(ap1, ap2, ap3, null);
+        AirControls controller = new AirControls(ap1, ap2, ap3, ap4);
         
         boolean controlLoop = true;
         for(int i =0; i <= 2; i++) {

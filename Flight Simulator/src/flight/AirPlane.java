@@ -356,7 +356,7 @@ public class AirPlane {
     }
     
     public boolean checkCrash(AirPlane incoming) {
-        if(incoming.posx == this.posx && incoming.posy == this.posy) 
+        if(Math.abs(incoming.posx - this.posx)  <= 10 && Math.abs(incoming.posy - this.posy) <= 10) 
             this.crash = false;
         return this.crash;
         
