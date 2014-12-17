@@ -45,5 +45,19 @@ $RECYCLE.BIN/
 *.lnk
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+<<<<<<< HEAD
+<<<<<<< HEAD
+hs_err_pid*
+/Flight Simulator/dist/
+=======
+hs_err_pid*
+<<<<<<< HEAD
+/Flight Simulator-UI/dist/
+=======
+>>>>>>> Development
+>>>>>>> Blake-Branch
+=======
 hs_err_pid*
 /Flight Simulator/nbproject/private/
+>>>>>>> Development
+/Flight/nbproject/private/
