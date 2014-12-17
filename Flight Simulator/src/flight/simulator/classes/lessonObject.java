@@ -15,7 +15,7 @@ public class lessonObject {
     String description;
     String name;
     LinkedList<plane> planes;
-    LinkedList<Warning> warning;
+    LinkedList warning;
     int time;
     int radius;
 }
