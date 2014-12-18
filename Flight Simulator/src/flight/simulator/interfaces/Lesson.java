@@ -9,12 +9,12 @@ package flight.simulator.interfaces;
  *
  * @author kmchal3
  */
-public class editLesson extends javax.swing.JFrame {
+public class Lesson extends javax.swing.JFrame {
 
     /**
      * Creates new form createLesson
      */
-    public editLesson() {
+    public Lesson() {
         initComponents();
     }
 
@@ -72,13 +72,12 @@ public class editLesson extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        createButton = new javax.swing.JToggleButton();
-        clearbutton = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lessonNameBox.setText("Lesson Name:");
 
+        lessonName.setText("Fly");
         lessonName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lessonNameActionPerformed(evt);
@@ -231,15 +230,6 @@ public class editLesson extends javax.swing.JFrame {
 
         jLabel12.setText("Plane 4");
 
-        createButton.setText("Create");
-
-        clearbutton.setText("Clear");
-        clearbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearbuttonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -277,23 +267,18 @@ public class editLesson extends javax.swing.JFrame {
                             .addComponent(description, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(183, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(callSign2)
-                                    .addComponent(callSign4)
-                                    .addComponent(callSign1)
-                                    .addComponent(callSign3))
-                                .addGap(30, 30, 30)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(heading3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                                    .addComponent(heading1)
-                                    .addComponent(heading4)
-                                    .addComponent(heading2, javax.swing.GroupLayout.Alignment.TRAILING)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(createButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(9, 9, 9)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(callSign2)
+                            .addComponent(callSign4)
+                            .addComponent(callSign1)
+                            .addComponent(callSign3))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(heading3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                            .addComponent(heading1)
+                            .addComponent(heading4)
+                            .addComponent(heading2, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,29 +310,26 @@ public class editLesson extends javax.swing.JFrame {
                                         .addComponent(jLabel6)
                                         .addGap(49, 49, 49))))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(clearbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(altitude4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(speed4, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addComponent(altitude4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(speed4, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(altitude3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(altitude2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(speed2, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(speed3)))))
-                                        .addGap(10, 10, 10)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(altitude3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(altitude2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(xcoor3)
-                                            .addComponent(xcoor4))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(speed2, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(speed3)))))
+                                .addGap(10, 10, 10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(xcoor3)
+                                    .addComponent(xcoor4))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(ycoor3, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
@@ -431,11 +413,7 @@ public class editLesson extends javax.swing.JFrame {
                     .addComponent(ycoor4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(createButton)
-                    .addComponent(clearbutton))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         pack();
@@ -489,40 +467,6 @@ public class editLesson extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_xcoor4ActionPerformed
 
-    private void clearbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearbuttonActionPerformed
-        lessonName.setText("");
-        description.setText("");
-        time.setText("");
-        radius.setText("");
-        callSign1.setText("");
-        callSign2.setText("");
-        callSign3.setText("");
-        callSign4.setText("");
-        heading1.setText("");
-        heading2.setText("");
-        heading3.setText("");
-        heading4.setText("");
-        altitude1.setText("");
-        altitude2.setText("");
-        altitude3.setText("");
-        altitude4.setText("");
-        speed1.setText("");
-        speed2.setText("");
-        speed3.setText("");
-        speed4.setText("");
-        xcoor1.setText("");
-        xcoor2.setText("");
-        xcoor3.setText("");
-        xcoor4.setText("");
-        ycoor1.setText("");
-        ycoor2.setText("");
-        ycoor3.setText("");
-        ycoor4.setText("");
-                
-        
-        
-    }//GEN-LAST:event_clearbuttonActionPerformed
-
     private void heading2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heading2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_heading2ActionPerformed
@@ -571,8 +515,6 @@ public class editLesson extends javax.swing.JFrame {
     private javax.swing.JTextField callSign2;
     private javax.swing.JTextField callSign3;
     private javax.swing.JTextField callSign4;
-    private javax.swing.JToggleButton clearbutton;
-    private javax.swing.JToggleButton createButton;
     private javax.swing.JTextField description;
     private javax.swing.JLabel descriptionLabel;
     private javax.swing.JTextField heading1;

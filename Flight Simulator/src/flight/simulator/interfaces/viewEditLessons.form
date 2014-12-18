@@ -27,7 +27,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="createLesson" max="32767" attributes="0"/>
-                  <Component id="viewEditLesson" pref="380" max="32767" attributes="0"/>
+                  <Component id="viewEditLesson" pref="367" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -39,7 +39,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="createLesson" min="-2" pref="135" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="viewEditLesson" pref="125" max="32767" attributes="0"/>
+              <Component id="viewEditLesson" pref="142" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -64,6 +64,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="View/Edit Lesson"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="viewEditLessonMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

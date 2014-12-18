@@ -42,6 +42,11 @@ public class viewEditLessons extends javax.swing.JFrame {
 
         viewEditLesson.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         viewEditLesson.setText("View/Edit Lesson");
+        viewEditLesson.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                viewEditLessonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,7 +56,7 @@ public class viewEditLessons extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(createLesson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(viewEditLesson, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE))
+                    .addComponent(viewEditLesson, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -60,7 +65,7 @@ public class viewEditLessons extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(createLesson, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(viewEditLesson, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                .addComponent(viewEditLesson, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -74,6 +79,10 @@ public class viewEditLessons extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_createLessonActionPerformed
+
+    private void viewEditLessonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewEditLessonMouseClicked
+        new editLesson().setVisible(true);
+    }//GEN-LAST:event_viewEditLessonMouseClicked
 
     /**
      * @param args the command line arguments

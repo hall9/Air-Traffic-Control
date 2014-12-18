@@ -125,7 +125,7 @@ private static AtcScreen atcscreen;
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-     new editLesson().setVisible(true);
+     new Lesson().setVisible(true);
     
     }//GEN-LAST:event_jButton1MouseClicked
 

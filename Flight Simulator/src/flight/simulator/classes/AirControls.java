@@ -157,6 +157,7 @@ public class AirControls extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Air Traffic Controller ");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(new java.awt.Dimension(2000, 2000));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Plane 1"));
         jPanel4.setMinimumSize(new java.awt.Dimension(250, 250));

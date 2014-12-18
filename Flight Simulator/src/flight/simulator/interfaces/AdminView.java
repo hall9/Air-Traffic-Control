@@ -34,7 +34,7 @@ public class AdminView extends javax.swing.JFrame {
         viewEditGoals = new javax.swing.JButton();
         logOUt = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         viewEditUsers.setText("User Options");
         viewEditUsers.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -49,6 +49,14 @@ public class AdminView extends javax.swing.JFrame {
         });
 
         viewEditLessons.setText("Lesson Options");
+        viewEditLessons.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                viewEditLessonsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                viewEditLessonsMouseEntered(evt);
+            }
+        });
         viewEditLessons.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewEditLessonsActionPerformed(evt);
@@ -123,6 +131,14 @@ public class AdminView extends javax.swing.JFrame {
     private void viewEditUsersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewEditUsersMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_viewEditUsersMouseClicked
+
+    private void viewEditLessonsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewEditLessonsMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_viewEditLessonsMouseEntered
+
+    private void viewEditLessonsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewEditLessonsMouseClicked
+        new viewEditLessons().setVisible(true);
+    }//GEN-LAST:event_viewEditLessonsMouseClicked
 
     /**
      * @param args the command line arguments

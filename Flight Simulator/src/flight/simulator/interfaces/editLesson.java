@@ -75,7 +75,7 @@ public class editLesson extends javax.swing.JFrame {
         createButton = new javax.swing.JToggleButton();
         clearbutton = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lessonNameBox.setText("Lesson Name:");
 
