@@ -24,7 +24,7 @@
 
  */
 
-package flight;
+package flight.simulator.classes;
 
 
 import java.awt.*;

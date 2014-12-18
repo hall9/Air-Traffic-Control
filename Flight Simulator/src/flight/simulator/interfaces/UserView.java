@@ -5,14 +5,20 @@
  */
 package flight.simulator.interfaces;
 
+import flight.simulator.classes.AtcScreen;
+import flight.simulator.classes.Test;
 import javax.swing.JOptionPane;
-import flight.Main;
+import flight.*;
+import javax.swing.JFrame;
+import java.awt.*;
+import javax.swing.*;
 /**
  *
  * @author blakejoynes
  */
 public class UserView extends javax.swing.JFrame {
-
+private static AtcScreen atcscreen;
+    private static JFrame frame;
     /**
      * Creates new form UserLesson
      */
@@ -110,8 +116,6 @@ public class UserView extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
 
-   
-    
     
     }//GEN-LAST:event_jButton3MouseClicked
 
@@ -121,7 +125,7 @@ public class UserView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-     this.dispose();
+     new editLesson().setVisible(true);
     
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -159,7 +163,26 @@ public class UserView extends javax.swing.JFrame {
                 new UserView().setVisible(true);
             }
         });
+        
     }
+     private static void createAndShowGUI() {
+        //Make sure we have nice window decorations.
+        JFrame.setDefaultLookAndFeelDecorated(true);
+
+        //Create and set up the window.
+        frame = new JFrame("ATC simulator");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        atcscreen = new AtcScreen();
+        atcscreen.setOpaque(true);
+        frame.setContentPane(atcscreen);
+        
+        //Display the window.
+        frame.setSize(1000,1000);
+       //atcscreen.setSize(300,300);
+        //frame.pack();
+        frame.setVisible(true);
+       }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

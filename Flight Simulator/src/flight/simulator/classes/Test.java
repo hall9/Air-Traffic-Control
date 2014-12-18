@@ -1,5 +1,5 @@
 /*
- * Main.java
+ * Test.java
  *
  * Created on May 4, 2006, 4:26 PM
  *
@@ -23,7 +23,7 @@
  *
  */
 
-package flight;
+package flight.simulator.classes;
 
 import java.awt.*;
 import javax.swing.*;
@@ -31,12 +31,12 @@ import javax.swing.*;
  *
  * @author David
  */
-public class Main {
+public class Test {
     
     private static AtcScreen atcscreen;
     private static JFrame frame;
     /** Creates a new instance of Main */
-    public Main() {
+    public Test() {
     }
         
     private static void createAndShowGUI() {
@@ -63,18 +63,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        createAndShowGUI();
   
-       
-        
-        
-        //Schedule a job for the event-dispatching thread:
-        //creating and showing this application's GUI.
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI();
-            }
-        });  
-        //String call_sign, int climb_rate, int turn_rate, int heading, int alt, String direct, int speed, int pos_x, int pos_y , int accel_rate        
+       //String call_sign, int climb_rate, int turn_rate, int heading, int alt, String direct, int speed, int pos_x, int pos_y , int accel_rate        
         AirPlane ap1 = new AirPlane("HIGH", 50, 90, 0, 50000, "bogus1", 400, 200, 100, 100);
         AirPlane ap2 = new AirPlane("LOW", 40, 90, 180, 10000, "bogus2", 200, 400, 200, 100);
         AirPlane ap3 = new AirPlane("MED", 10, 12, 110, 10000, "bogus2", 200, 40, 200, 90);
@@ -99,6 +90,7 @@ public class Main {
         atcscreen.addplane(ap1);
         atcscreen.addplane(ap2);
         atcscreen.addplane(ap3);
+        atcscreen.addplane(ap4);
         AirControls controller = new AirControls(ap1, ap2, ap3, ap4);
         
         boolean controlLoop = true;
@@ -124,5 +116,15 @@ public class Main {
         }
         }
         JOptionPane.showMessageDialog(null, "Simulation has ended");
-    }  
+    
+        
+        
+        //Schedule a job for the event-dispatching thread:
+        //creating and showing this application's GUI.
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });  
+    }
 }
